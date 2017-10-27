@@ -20,32 +20,23 @@ module.exports = function(app) {
       res.json(result);
     }else {
       console.log(friendsData);
-      /*
-        [
-        {
-          name: 
-          score[]:
-        },
-        {
-  
-        }
+        
+        var current_diff = 0;
+        var lowest_diff = 0;
+        friendsData.forEach(function(friend){
+          friend["scores"].forEach(function(score){
 
-        ]
-        current diff
-        lowest difference 
+          })
+        })
+
+        /*
+
         loop though array of objects compare scores current score against each object score
         
         difference var start 0 take the absolute from every inex and add to diff var.
 
-
-
       */
 
-
-      // convert score to arr of ints 
-      // look at all friends and compare to current friend score
-      // which ever friend has the closest? number to current frind is a match
-      // give them a candy  
 
     }
   });
