@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fun Fun Fun</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div>
+	<form action="" method="POST" id="quiz-form">
+		<div class="form-group">
+	    <label for="email">Full Name</label>
+	    <input type="text" class="form-control" id="user-name" placeholder="first & last name" required>
+	    <label for="email">Selfie</label>
+	    <input type="text" class="form-control" id="user-image" placeholder="image url" required>
+	  </div>
+		<div class="form-group">
+			<div class="btn-group" data-toggle="buttons">
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsA" id="option1" autocomplete="off" value="1"> OPT 1
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsA" id="option2" autocomplete="off" value="2"> OPT 2
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsA" id="option3" autocomplete="off" value="3"> OPT 3
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsA" id="option4" autocomplete="off" value="4"> OPT 4
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsA" id="option5" autocomplete="off" value="5"> OPT 5
+			  </label>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="btn-group" data-toggle="buttons">
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsB" id="option6" autocomplete="off" value="1"> OPT 1
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsB" id="option7" autocomplete="off" value="2"> OPT 2
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsB" id="option8" autocomplete="off" value="3"> OPT 3
+			  </label>
+			  <label class="btn btn-primary">
+		    	<input type="radio" name="optionsB" id="option9" autocomplete="off" value="4"> OPT 4
+		  	</label>
+		  	<label class="btn btn-primary">
+			    <input type="radio" name="optionsB" id="option10" autocomplete="off" value="5"> OPT 5
+			  </label>
+			</div>
+		</div>
+		<button id="submit" type="submit" class="btn btn-default" data-loading-text="Loading..." autocomplete="off" >Submit</button>
+	</form>
+<!-- data-toggle="modal" data-target="#myModal" -->
+	<div class="modal fade" id="result-modal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Sweetest Friends</h4>
+        </div>
+        <div class="modal-body">
+         
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+	</div>
+	<script type="text/javascript">
+	class Friend {
+		constructor(score){
+			this.name = $("#user-name").val().trim();
+			this.image = $("#user-image").val().trim();
+			this.scores = [];
+		}
+	}
+
+	$("#submit").on("click", function(e) {
+		e.preventDefault();
+		var $btn = $(this).button('loading');
+		var qA = $("input:radio[name='optionsA']:checked").val();
+		var qB = $("input:radio[name='optionsB']:checked").val();
+		// var qC = $("input:radio[name='r']:checked").val();
+		// var qD = $("input:radio[name='r']:checked").val();
+		// var qE = $("input:radio[name='r']:checked").val();
+		// var qF = $("input:radio[name='r']:checked").val();
+		// var qG = $("input:radio[name='r']:checked").val();
+		// var qH = $("input:radio[name='r']:checked").val();
+		// var qI = $("input:radio[name='r']:checked").val();
+		// var qJ = $("input:radio[name='r']:checked").val();
+		
+		var newFriend = new Friend();
+		newFriend.scores.push(qA)
+		newFriend.scores.push(qB);
+		console.log(newFriend.score);
+		console.log(newFriend);
+		$.post("/api/quiz", newFriend,function(data) {
+	    	$btn.button('reset');
+	    
+	      console.log("result: ", data);
+	      $(".modal-body").empty();
+
+	      var modalContent = `
+													<div class="row">
+														  <div class="col-sm-6 col-md-4">
+														    <div class="thumbnail">
+														      <img src="${data[0].image}" alt="your selfie">
+														      <div class="caption">
+														        <h3>${data[0].name}</h3>
+														      </div>
+														    </div>
+														  </div>
+														  <div class="col-sm-6 col-md-4">
+														    <div class="thumbnail">
+														      <img src="${data[1].image}" alt="sweet treat">
+														      <div class="caption">
+														        <h3>${data[1].name}</h3>
+														      </div>
+														    </div>
+														  </div>
+														  <div class="col-sm-6 col-md-4">
+														    <div class="thumbnail">
+														      <img src="${data[2].image}" alt="sweet friend">
+														      <div class="caption">
+														        <h3>${data[2].name}</h3>
+														      </div>
+														    </div>
+														  </div>
+														</div>`;
+
+	      $(".modal-body").append(modalContent);
+	    	$("#result-modal").modal('show');
+
+	    $("form").trigger("reset");
+
+	  });
+	});
+      
+	</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!-- homepage #EAFEF8 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fun Fun Fun</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100&effect=neon">
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Poiret+One" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../assets/css/style.css"> -->
+	<style type="text/css">
+		html, body {
+		  height: 100%;
+		}
+		body {
+		  display: flex;
+		  flex-direction: column;
+		  background-color: #f9f9f9;
+		  /*#cfd2db;*/
+		 /*#f9f9f9;*/
+		}
+		h1{
+			font-family: 'Poiret One', cursive;
+			font-size: 4em;
+			margin-bottom: 5%;
+		}
+		.content{
+			flex: 1 0 auto;
+		}
+		.wrap {
+			margin-top: 30%;
+		}
+		.quizBttnWrap{
+			padding-top: 15%;
+			}
+		a {
+			/*background-color: rgba(255,255,255,.3);*/
+			/*border: 1px solid #000;*/
+			border-bottom: .5px solid #333;
+			color: #333;
+			text-decoration: none;
+			font-size: 2em;
+			font-weight: 100;
+			font-family: 'Open Sans', sans-serif;;
+		}
+		a:hover{
+			color: #333;
+			text-decoration: none;
+		}
+		.footer {
+			background-color: #EAFEF8;
+			padding: 2% 0;
+			text-align: center;
+		}
+		.footer ul {
+			margin: 0;
+		}
+		.footer li {
+			list-style: none;
+			display: inline-block;
+		}
+		.footer a {
+			padding: 0 20px;
+			border-right: 1px solid #333;
+			text-decoration: none;
+			border-bottom: none;
+			font-size: 16px;
+			font-weight: 100;
+		}
+		#footer-nav :last-child a{
+			border-right:none;
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div class="row">
+			<div class="col-md-6">
+					<img src="sweets.png">
+				</div>
+				<div class="col-md-6 ">
+				<div class="wrap">
+				<h1>SWEESTEST FRIENDS</h1>
+				<!-- class="font-effect-neon" -->
+				<a id="quizBttn" href="/quiz">find a friend</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<ul id="footer-nav">
+				<li><a href="/api/friends">friends</a></li>
+				<li><a href="/api/sweets">sweets</a></li>
+				<li><a href="https://github.com/AmberLBurroughs/friend_finder" target="_blank">github</a>
+				</li>
+		</ul>
+	</div>
+</body>
+</html>
