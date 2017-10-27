@@ -24,6 +24,11 @@
 			font-size: 4em;
 			margin-bottom: 5%;
 		}
+		h2{
+			font-family: 'Poiret One', cursive;
+			font-size: 3em;
+			margin-bottom: 3%;
+		}
 		.content{
 			flex: 1 0 auto;
 		}
@@ -79,6 +84,9 @@
 		}
 		.form-group {
 			clear:both;
+			margin-bottom: 5%;
+			padding-bottom: 2%;
+			border-bottom:1px solid #333;
 		}
 		.btn-primary {
 			background-color: transparent;
@@ -98,18 +106,26 @@
 			background-color: #EAFEF8;
 			color: #333;
 		}
+		.clearfix:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
 		</style>
 </head>
 <body>
 	<div class="container">
+	<h1>SWEET FRIEND QUIZ</h1>
 	<form action="" method="POST" id="quiz-form">
-		<div class="form-group">
+		<div class="form-group clearfix">
+			<h2>personal information</h2>
 	    <!-- <label for="email">Full Name</label> -->
 	    <input type="text" class="form-control user-info" id="user-name" placeholder="first & last initial" required>
 	    <!-- <label for="email">Selfie</label> -->
 	    <input type="text" class="form-control" id="user-image" placeholder="image url" required>
 	  </div>
 		<div class="form-group">
+			<h2>question 1</h2>
 			<div class="btn-toolbar" data-toggle="buttons">
 			  <label class="btn btn-primary">
 			    <input type="radio" name="optionsA" id="option1" autocomplete="off" value="1"> OPT 1
@@ -129,6 +145,7 @@
 			</div>
 		</div>
 		<div class="form-group">
+			<h2>question 2</h2>
 			<div class="btn-toolbar" data-toggle="buttons">
 			  <label class="btn btn-primary">
 			    <input type="radio" name="optionsB" id="option6" autocomplete="off" value="1"> OPT 1
@@ -147,6 +164,166 @@
 			  </label>
 			</div>
 		</div>
+		<div class="form-group">
+			<h2>question 3</h2>
+			<div class="btn-toolbar" data-toggle="buttons">
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsC" id="option11" autocomplete="off" value="1"> OPT 1
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsC" id="option12" autocomplete="off" value="2"> OPT 2
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsC" id="option13" autocomplete="off" value="3"> OPT 3
+			  </label>
+			  <label class="btn btn-primary">
+		    	<input type="radio" name="optionsC" id="option14" autocomplete="off" value="4"> OPT 4
+		  	</label>
+		  	<label class="btn btn-primary">
+			    <input type="radio" name="optionsC" id="option15" autocomplete="off" value="5"> OPT 5
+			  </label>
+			</div>
+		</div>
+		<div class="form-group">
+			<h2>question 4</h2>
+			<div class="btn-toolbar" data-toggle="buttons">
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsD" id="option16" autocomplete="off" value="1"> OPT 1
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsD" id="option17" autocomplete="off" value="2"> OPT 2
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsD" id="option18" autocomplete="off" value="3"> OPT 3
+			  </label>
+			  <label class="btn btn-primary">
+		    	<input type="radio" name="optionsD" id="option19" autocomplete="off" value="4"> OPT 4
+		  	</label>
+		  	<label class="btn btn-primary">
+			    <input type="radio" name="optionsD" id="option20" autocomplete="off" value="5"> OPT 5
+			  </label>
+			</div>
+		</div>
+		<div class="form-group">
+			<h2>question 5</h2>
+			<div class="btn-toolbar" data-toggle="buttons">
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsE" id="option21" autocomplete="off" value="1"> OPT 1
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsE" id="option22" autocomplete="off" value="2"> OPT 2
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsE" id="option23" autocomplete="off" value="3"> OPT 3
+			  </label>
+			  <label class="btn btn-primary">
+		    	<input type="radio" name="optionsE" id="option24" autocomplete="off" value="4"> OPT 4
+		  	</label>
+		  	<label class="btn btn-primary">
+			    <input type="radio" name="optionsE" id="option25" autocomplete="off" value="5"> OPT 5
+			  </label>
+			</div>
+		</div>
+		<div class="form-group">
+			<h2>question 6</h2>
+			<div class="btn-toolbar" data-toggle="buttons">
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsF" id="option26" autocomplete="off" value="1"> OPT 1
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsF" id="option27" autocomplete="off" value="2"> OPT 2
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsF" id="option28" autocomplete="off" value="3"> OPT 3
+			  </label>
+			  <label class="btn btn-primary">
+		    	<input type="radio" name="optionsF" id="option29" autocomplete="off" value="4"> OPT 4
+		  	</label>
+		  	<label class="btn btn-primary">
+			    <input type="radio" name="optionsF" id="option30" autocomplete="off" value="5"> OPT 5
+			  </label>
+			</div>
+		</div>
+		<div class="form-group">
+			<h2>question 7</h2>
+			<div class="btn-toolbar" data-toggle="buttons">
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsG" id="option31" autocomplete="off" value="1"> OPT 1
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsG" id="option32" autocomplete="off" value="2"> OPT 2
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsG" id="option33" autocomplete="off" value="3"> OPT 3
+			  </label>
+			  <label class="btn btn-primary">
+		    	<input type="radio" name="optionsG" id="option34" autocomplete="off" value="4"> OPT 4
+		  	</label>
+		  	<label class="btn btn-primary">
+			    <input type="radio" name="optionsG" id="option35" autocomplete="off" value="5"> OPT 5
+			  </label>
+			</div>
+		</div>
+		<div class="form-group">
+			<h2>question 8</h2>
+			<div class="btn-toolbar" data-toggle="buttons">
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsH" id="option36" autocomplete="off" value="1"> OPT 1
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsH" id="option37" autocomplete="off" value="2"> OPT 2
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsH" id="option38" autocomplete="off" value="3"> OPT 3
+			  </label>
+			  <label class="btn btn-primary">
+		    	<input type="radio" name="optionsH" id="option39" autocomplete="off" value="4"> OPT 4
+		  	</label>
+		  	<label class="btn btn-primary">
+			    <input type="radio" name="optionsH" id="option40" autocomplete="off" value="5"> OPT 5
+			  </label>
+			</div>
+		</div>
+		<div class="form-group">
+			<h2>question 7</h2>
+			<div class="btn-toolbar" data-toggle="buttons">
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsI" id="option41" autocomplete="off" value="1"> OPT 1
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsI" id="option42" autocomplete="off" value="2"> OPT 2
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsI" id="option43" autocomplete="off" value="3"> OPT 3
+			  </label>
+			  <label class="btn btn-primary">
+		    	<input type="radio" name="optionsI" id="option44" autocomplete="off" value="4"> OPT 4
+		  	</label>
+		  	<label class="btn btn-primary">
+			    <input type="radio" name="optionsI" id="option45" autocomplete="off" value="5"> OPT 5
+			  </label>
+			</div>
+		</div>
+		<div class="form-group">
+			<h2>question 10</h2>
+			<div class="btn-toolbar" data-toggle="buttons">
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsJ" id="option46" autocomplete="off" value="1"> OPT 1
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsJ" id="option47" autocomplete="off" value="2"> OPT 2
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="optionsJ" id="option48" autocomplete="off" value="3"> OPT 3
+			  </label>
+			  <label class="btn btn-primary">
+		    	<input type="radio" name="optionsJ" id="option49" autocomplete="off" value="4"> OPT 4
+		  	</label>
+		  	<label class="btn btn-primary">
+			    <input type="radio" name="optionsJ" id="option50" autocomplete="off" value="5"> OPT 5
+			  </label>
+			</div>
+		</div>
 		<button id="submit" type="submit" class="btn btn-default" data-loading-text="Loading..." autocomplete="off" >Submit</button>
 	</form>
 <!-- data-toggle="modal" data-target="#myModal" -->
@@ -158,7 +335,6 @@
           <h4 class="modal-title">Sweetest Friends</h4>
         </div>
         <div class="modal-body">
-         
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -181,18 +357,27 @@
 		var $btn = $(this).button('loading');
 		var qA = $("input:radio[name='optionsA']:checked").val();
 		var qB = $("input:radio[name='optionsB']:checked").val();
-		// var qC = $("input:radio[name='r']:checked").val();
-		// var qD = $("input:radio[name='r']:checked").val();
-		// var qE = $("input:radio[name='r']:checked").val();
-		// var qF = $("input:radio[name='r']:checked").val();
-		// var qG = $("input:radio[name='r']:checked").val();
-		// var qH = $("input:radio[name='r']:checked").val();
-		// var qI = $("input:radio[name='r']:checked").val();
-		// var qJ = $("input:radio[name='r']:checked").val();
+		var qC = $("input:radio[name='optionsC']:checked").val();
+		var qD = $("input:radio[name='optionsD']:checked").val();
+		var qE = $("input:radio[name='optionsE']:checked").val();
+		var qF = $("input:radio[name='optionsF']:checked").val();
+		var qG = $("input:radio[name='optionsG']:checked").val();
+		var qH = $("input:radio[name='optionsH']:checked").val();
+		var qI = $("input:radio[name='optionsI']:checked").val();
+		var qJ = $("input:radio[name='optionsJ']:checked").val();
 		
 		var newFriend = new Friend();
 		newFriend.scores.push(qA)
 		newFriend.scores.push(qB);
+		newFriend.scores.push(qC);
+		newFriend.scores.push(qD);
+		newFriend.scores.push(qE);
+		newFriend.scores.push(qF);
+		newFriend.scores.push(qG);
+		newFriend.scores.push(qH);
+		newFriend.scores.push(qI);
+		newFriend.scores.push(qJ);
+
 		console.log(newFriend.score);
 		console.log(newFriend);
 		$.post("/api/quiz", newFriend,function(data) {
