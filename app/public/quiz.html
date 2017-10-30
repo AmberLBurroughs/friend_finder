@@ -14,7 +14,7 @@
 <body>
 	<div class="container">
 	<h1>SWEET FRIEND QUIZ</h1>
-	<form action="" method="POST" id="quiz-form">
+	<form id="quiz-form">
 		<div class="form-group clearfix">
 			<h2>personal information</h2>
 	    <!-- <label for="email">Full Name</label> -->
@@ -222,7 +222,7 @@
 			  </label>
 			</div>
 		</div>
-		<button id="submit" type="submit" class="btn btn-default" data-loading-text="Loading..." autocomplete="off" >Submit</button>
+		<button id="submit" type="button" class="btn btn-default" data-loading-text="Loading..." autocomplete="off" >Submit</button>
 	</form>
 <!-- data-toggle="modal" data-target="#myModal" -->
 	<div class="modal fade" id="result-modal" role="dialog">
@@ -251,7 +251,8 @@
 	}
 
 	$("#submit").on("click", function(e) {
-		e.preventDefault();
+		e.preventDefault() 
+		//form validation
 		var $btn = $(this).button('loading');
 		var qA = $("input:radio[name='optionsA']:checked").val();
 		var qB = $("input:radio[name='optionsB']:checked").val();
@@ -336,6 +337,7 @@
 	    $("form").trigger("reset");
 
 	  });
+	  return false;
 	});
       
 	</script>
