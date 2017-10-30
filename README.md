@@ -1,5 +1,5 @@
 # friend finder - sweetest friends
-<img src="/assets/poster.jpg" >
+<img src="/app/public/assets/img/poster.jpg">
 
 ## Getting Started
 
