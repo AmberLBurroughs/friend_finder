@@ -14,7 +14,7 @@
 <body>
 	<div class="container">
 	<h1>SWEET FRIEND QUIZ</h1>
-	<form id="quiz-form">
+	<form id="quiz-form" required>
 		<div class="form-group clearfix">
 			<h2>personal information</h2>
 	    <!-- <label for="email">Full Name</label> -->
@@ -251,7 +251,7 @@
 	}
 
 	$("#submit").on("click", function(e) {
-		e.preventDefault() 
+		e.preventDefault();
 		//form validation
 		var $btn = $(this).button('loading');
 		var qA = $("input:radio[name='optionsA']:checked").val();
@@ -337,7 +337,6 @@
 	    $("form").trigger("reset");
 
 	  });
-	  return false;
 	});
       
 	</script>

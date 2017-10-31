@@ -43,7 +43,11 @@ module.exports = function(app) {
           }
         }
         friendsData.push(newFriend);
-        var result = [matchedFriend, sweetsData[index], newFriend]
+        var result = {
+              friendA:matchedFriend,
+              sweet:sweetsData[index],
+              friendB:newFriend
+            }
         res.json(result);
       }
   });
