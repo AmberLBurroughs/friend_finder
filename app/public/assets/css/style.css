@@ -6,8 +6,9 @@ html, body {
 		  flex-direction: column;
 		  background-color: #f9f9f9;
 		  font-family: 'Open Sans', sans-serif;
+		  overflow-x: hidden;
 		  /*#cfd2db;*/
-		 /*#f9f9f9;*/
+		 /*#f9f9f9;*/ 
 		}
 		h1{
 			font-family: 'Poiret One', cursive;
@@ -19,11 +20,15 @@ html, body {
 			font-size: 3em;
 			margin-bottom: 3%;
 		}
+		img {
+			max-width: 100%;
+		}
 		.content{
 			flex: 1 0 auto;
 		}
 		.wrap {
 			margin-top: 30%;
+			padding-left: 0;
 		}
 		.quizBttnWrap{
 			padding-top: 15%;
@@ -161,3 +166,13 @@ html, body {
 		.modal-footer{
 			background-color: #f9f9f9;
 		}
+
+		@media only screen and (max-width: 560px) {
+				.wrap {
+					margin-top: 0;
+					padding-left: 5%;
+					display: inline-block;
+    			margin-top: -15%;
+    			padding-bottom: 5%;
+				}
+		 }
