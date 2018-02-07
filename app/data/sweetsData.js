@@ -13,7 +13,7 @@ var sweets = [
 	},
 	{
 		name: "sour patch kids",
-		image: "http://via.placeholder.com/350x150",
+		image: "https://www.heycart.com/wp-content/uploads/2017/11/103.png",
 	},
 	{
 		name: "starburst",
