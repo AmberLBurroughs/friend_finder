@@ -259,7 +259,7 @@
 		for(var i = 0; i < 10;i++){
 			var results = $(`input:radio[name='score-${i}']:checked`).val();
 			//console.log(results)
-			newFriend.score.push(results);
+			newFriend.score.push(parseInt(results));
 		}
 		
 		//console.log(newFriend.score);
@@ -284,17 +284,17 @@
 	});
    
  	function getMatch(newFriend, btn){
- 		$.post("/api/quiz", newFriend,function(data) {
+ 		$.post("/api/quiz", newFriend, function(data) {
 	    	btn.button('reset');
-	     
-	      renderMatch(data)
+		     //console.log("result: ", data);
+		    renderMatch(data)
 	    $("form").trigger("reset");
 	  });
  	}
 
 	function renderMatch(data){
 		$(".modal-body").empty();
-		console.log("result: ", data);
+		//console.log("result: ", data);
 		var modalContent = `
 														<div class="row">
 															  <div class="col-sm-6 col-md-4">
