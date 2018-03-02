@@ -242,6 +242,7 @@
   </div>
 	</div>
 	<script type="text/javascript">
+
 	class Friend {
 		constructor(score){
 			this.name = $("#user-name").val().trim();
@@ -266,8 +267,8 @@
 
 		if(ValidURL(newFriend.image) && newFriend.name.length > 0 && newFriend.score.length === 10 && !newFriend.score.includes(NaN) && !newFriend.score.includes(null)){
      	console.log("we can do our post now");
-     	var $btn = $(this).button('loading');
-     	getMatch(newFriend);
+     	var btn = $(this).button('loading');
+     	getMatch(newFriend, btn);
     }
     else {
     	if(!ValidURL(newFriend.image)){
@@ -282,9 +283,9 @@
     }
 	});
    
- 	function getMatch(newFriend){
+ 	function getMatch(newFriend, btn){
  		$.post("/api/quiz", newFriend,function(data) {
-	    	$btn.button('reset');
+	    	btn.button('reset');
 	    
 	      console.log("result: ", data);
 	      renderMatch(data)
