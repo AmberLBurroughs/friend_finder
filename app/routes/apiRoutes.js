@@ -1,6 +1,7 @@
 var friendsData = require("../data/friendsData");
 var sweetsData = require("../data/sweetsData");
 console.log("test: ",friendsData);
+
 module.exports = function(app) {
 
 	app.get("/api/friends", function(req, response) {
@@ -28,6 +29,8 @@ module.exports = function(app) {
         var lowestDiff = 1000; // set this to any really high number to start.
 
         var matchedFriend; // undefined becasue initially the friend has not been matched with anyone.
+
+        // total number on answered question from quiz for new friend
         var scoresLength = newFriend["scores[]"].length
         console.log(scoresLength);
 
@@ -37,8 +40,8 @@ module.exports = function(app) {
           var currentDiff = 0;
           
           for(var i = 0; i<scoresLength;i++){
-            var scoreA = parseInt(newFriend["scores[]"][i]);
-            var scoreB = currentFriend["scores[]"][i];
+            var scoreA = parseInt(newFriend["scores[]"][i]); //1
+            var scoreB = currentFriend["scores[]"][i]; //1 
             var diff = Math.abs(scoreA-scoreB);
             currentDiff += diff;
           }
