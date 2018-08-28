@@ -1,6 +1,7 @@
 
 # friend finder - sweetest friends
 <img src="/app/public/assets/img/poster.jpg" >
+[demo](https://sweetest-friends.herokuapp.com/)
 
 ## Getting Started
 
